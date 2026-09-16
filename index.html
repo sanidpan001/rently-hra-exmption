@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HRA Exemption Calculator 2026 - HRA Tax Calculator | Rently</title>
+<meta name="description" content="Free HRA Exemption Calculator 2026 - Calculate HRA exemption as per IT Act. Metro 50% / Non-Metro 40% rule. Save tax up to 1L. No subscription, unlimited.">
+<meta name="keywords" content="HRA exemption calculator, HRA calculator, house rent allowance calculator, HRA tax exemption, HRA exemption calculation, HRA tax saving">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://rently-hra.pages.dev/">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700;800&family=Inter:wght@400;600&display=swap');
+:root{--bg:#fef9f2;--card:#ffffff;--ink:#1e1a16;--clay:#ff6a2a;--clay2:#c9440e;--cream:#fff6ec;--border:#f3e6d4;--muted:#9a8e83;--green:#15803d}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:'Inter',sans-serif;line-height:1.6}
+header{background:rgba(254,249,242,0.85);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100;padding:13px 5%;display:flex;justify-content:space-between;align-items:center}
+.logo{font-weight:800;font-size:20px;color:var(--ink);text-decoration:none;display:flex;align-items:center;gap:10px;letter-spacing:-0.4px;font-family:'Bricolage Grotesque',sans-serif}
+.logo-mark{width:34px;height:34px;background:var(--ink);color:#fff;display:grid;place-items:center;border-radius:10px;font-weight:800;transform:rotate(3deg)}
+nav a{margin-left:14px;text-decoration:none;color:var(--muted);font-weight:600;font-size:14px}
+nav a.cta{background:var(--ink);color:#fff;padding:10px 18px;border-radius:100px}
+.container{max-width:1150px;margin:0 auto;padding:20px 5%}
+.ad-box{background:#fff;border:1px dashed #e8d5bc;border-radius:16px;min-height:90px;display:flex;align-items:center;justify-content:center;margin:18px 0}
+@media(max-width:768px){.ad-box{min-height:70px}.hide-d{display:none}.show-m{display:block!important}}
+.show-m{display:none}
+.main{display:grid;grid-template-columns:1.12fr 0.88fr;gap:20px}
+@media(max-width:950px){.main{grid-template-columns:1fr}}
+.card{background:var(--card);border:1px solid var(--border);border-radius:20px;padding:24px;box-shadow:0 12px 24px rgba(30,26,22,0.05)}
+.pill{display:inline-flex;background:var(--cream);border:1px solid var(--border);color:var(--clay);font-size:11px;font-weight:700;padding:6px 12px;border-radius:100px;letter-spacing:0.5px}
+.card h1{font-family:'Bricolage Grotesque',sans-serif;font-size:28px;line-height:1.05;margin:12px 0 8px;letter-spacing:-0.7px}
+.card h1 span{color:var(--clay)}
+.sub{color:var(--muted);font-size:13px;margin-bottom:18px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.input{margin-bottom:14px}
+.input label{font-size:11px;font-weight:700;color:#57534e;margin-bottom:6px;display:block;text-transform:uppercase;letter-spacing:0.6px}
+.input input,.input select{width:100%;padding:12px 14px;border:1.5px solid var(--border);border-radius:12px;background:#fffdf8;font-size:14px;font-weight:600;outline:none}
+.input input:focus{border-color:var(--clay)}
+.range{width:100%;accent-color:var(--clay);margin-top:6px}
+.btn{width:100%;background:var(--clay);color:#fff;border:none;padding:14px;border-radius:12px;font-size:14px;font-weight:700;cursor:pointer;margin-top:6px;box-shadow:0 10px 20px rgba(255,106,42,0.25)}
+.btn:hover{background:var(--clay2)}
+.result{background:linear-gradient(180deg,#1e1a16,#2a221c);border-radius:20px;padding:24px;color:#fff;position:relative;overflow:hidden}
+.result::before{content:"";position:absolute;top:-50px;right:-40px;width:200px;height:200px;background:var(--clay);filter:blur(60px);opacity:0.3}
+.kicker{font-size:10px;letter-spacing:2px;color:#ffbe9c;text-transform:uppercase}
+.big{font-family:'Bricolage Grotesque',sans-serif;font-size:40px;font-weight:800;margin:8px 0;letter-spacing:-1px}
+.rows{display:grid;gap:9px;margin-top:16px}
+.row{display:flex;justify-content:space-between;align-items:center;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.08);padding:11px 13px;border-radius:12px;font-size:13px}
+.row b{font-size:13px}
+.row.green{background:rgba(255,106,42,0.18);border-color:rgba(255,106,42,0.35)}
+.row.dim{opacity:0.7}
+.formula{background:rgba(255,255,255,0.06);border:1px dashed rgba(255,255,255,0.15);padding:10px;border-radius:10px;font-size:11px;text-align:center;margin-top:12px;color:#d6d3d1}
+.content{background:#fff;border:1px solid var(--border);border-radius:20px;padding:28px;margin-top:22px}
+.content h2{font-family:'Bricolage Grotesque',sans-serif;font-size:22px;margin:24px 0 10px}
+.content h2:first-child{margin-top:0}
+.content p{color:#57534e;font-size:14px;margin-bottom:10px;line-height:1.85}
+.faq div{padding:13px 0;border-bottom:1px solid var(--cream)}
+.faq b{color:var(--ink);font-size:14px}
+footer{background:#1e1a16;color:#a8a29e;padding:36px 5%;margin-top:32px;border-radius:22px 22px 0 0;text-align:center}
+footer a{color:#ffbe9c;text-decoration:none;margin:0 10px;font-size:13px}
+</style>
+</head>
+<body>
+<header>
+<a href="/" class="logo"><div class="logo-mark">R</div> Rently</a>
+<nav>
+<a href="/">Home</a>
+<a href="https://fixoraa.tech" class="cta" target="_blank">More Tools →</a>
+</nav>
+</header>
+
+<div class="container">
+<div class="ad-box">
+<div class="hide-d">
+<script>
+  atOptions = {
+    'key' : '4e68ac77881c17fe128a46565d9a4e8c',
+    'format' : 'iframe',
+    'height' : 90,
+    'width' : 728,
+    'params' : {}
+  };
+</script>
+<script src="https://www.highrevenueformat.com/4e68ac77881c17fe128a46565d9a4e8c/invoke.js"></script>
+</div>
+<div class="show-m">
+<script>
+  atOptions = {
+    'key' : '4e68ac77881c17fe128a46565d9a4e8c',
+    'format' : 'iframe',
+    'height' : 50,
+    'width' : 320,
+    'params' : {}
+  };
+</script>
+<script src="https://www.highrevenueformat.com/4e68ac77881c17fe128a46565d9a4e8c/invoke.js"></script>
+</div>
+</div>
+
+<div class="main">
+<div class="card">
+<div class="pill">● AS PER IT ACT • METRO 50% • OLD REGIME ONLY • UNLIMITED</div>
+<h1>HRA <span>Exemption</span> Calculator</h1>
+<p class="sub">Calculate tax-free HRA as per Section 10(13A). Save up to ₹1 Lakh tax.</p>
+
+<div class="grid2">
+<div class="input"><label>Basic Salary (Annual) ₹</label><input type="number" id="basic" value="600000"></div>
+<div class="input"><label>DA (Annual) ₹ if any</label><input type="number" id="da" value="0"></div>
+</div>
+
+<div class="grid2">
+<div class="input"><label>HRA Received (Annual) ₹</label><input type="number" id="hraRec" value="300000"><input type="range" class="range" min="50000" max="600000" step="10000" value="300000" id="hraRange" oninput="document.getElementById('hraRec').value=this.value;calcHRA()"></div>
+<div class="input"><label>Monthly Rent Paid (₹)</label><input type="number" id="rentM" value="25000"></div>
+</div>
+
+<div class="grid2">
+<div class="input"><label>City Type</label><select id="city"><option value="metro">Metro (Delhi, Mumbai, Kolkata, Chennai) - 50%</option><option value="nonmetro">Non-Metro - 40%</option></select></div>
+<div class="input"><label>Tax Slab %</label><select id="slab"><option value="0">0% (No Tax)</option><option value="5">5%</option><option value="10">10%</option><option value="15">15%</option><option value="20" selected>20%</option><option value="30">30%</option></select></div>
+</div>
+
+<button class="btn" onclick="calcHRA()">Calculate HRA Exemption →</button>
+<p style="font-size:11px;color:var(--muted);text-align:center;margin-top:8px">HRA exemption only in Old Regime. New Regime me HRA taxable hai.</p>
+</div>
+
+<div class="result">
+<div class="kicker">YOUR HRA EXEMPTION</div>
+<div class="big" id="exempt">₹ 2,40,000 <span style="font-size:14px;font-weight:400;color:#d6d3d1"> / year tax-free</span></div>
+<div style="font-size:12px;color:#d6d3d1" id="taxSave">Tax Saved: ₹ 48,000 yearly • ₹ 4,000 monthly</div>
+
+<div class="rows">
+<div class="row"><span>1) Actual HRA Received</span><b id="r1">₹ 3,00,000</b></div>
+<div class="row"><span>2) Rent - 10% Basic (Annual)</span><b id="r2">₹ 2,40,000</b></div>
+<div class="row"><span>3) 50% of Basic (Metro)</span><b id="r3">₹ 3,00,000</b></div>
+<div class="row green"><span>Exemption = Min of 3</span><b id="rExempt">₹ 2,40,000</b></div>
+<div class="row"><span>Taxable HRA</span><b id="rTaxable">₹ 60,000</b></div>
+<div class="row dim"><span>Monthly Exempt</span><b id="rMonthly">₹ 20,000</b></div>
+</div>
+
+<div class="formula">Rule: Exempt = Min(HRA Received, Rent - 10% Basic, 50% Basic Metro / 40% Non-Metro)</div>
+<div style="margin-top:12px;background:rgba(255,106,42,0.15);border:1px solid rgba(255,106,42,0.3);padding:10px 12px;border-radius:10px;font-size:11px;color:#ffbe9c" id="tip">💡 Tip: Increase rent to ₹30k to get full ₹3L exemption and save extra ₹12k tax!</div>
+</div>
+</div>
+
+<div class="ad-box">
+<div data-banner-id="1501463"></div>
+</div>
+
+<div class="content">
+<h2>What is HRA Exemption Calculator? Section 10(13A) Guide 2026</h2>
+<p>HRA (House Rent Allowance) is allowance given by employer for rent. As per Section 10(13A) of Income Tax Act, HRA is partially tax-free if you live on rent. Our Rently HRA Exemption Calculator calculates exact tax-free HRA as per government 3 rules. It is 100% free, unlimited, no watermark, works worldwide for India. HRA exemption is only available in Old Tax Regime, not in New Regime 2026 where HRA is fully taxable.</p>
+<p>Example: Basic Rs 6L yearly, HRA received Rs 3L yearly, Rent paid Rs 25k monthly = Rs 3L yearly, Metro city. Rule 1: Actual HRA = 3L. Rule 2: Rent -10% Basic = 3L -60k = 2.4L. Rule 3: 50% Basic = 3L. Minimum is 2.4L, so exemption = Rs 2.4L tax-free, remaining Rs 60k taxable. If tax slab 20%, tax saved = 2.4L*20% = Rs 48k yearly, Rs 4k monthly.</p>
+
+<h2>How HRA Calculator Works? 3 Rules Formula</h2>
+<p>As per Income Tax Act, HRA exemption is MINIMUM of these 3: 1) Actual HRA received from employer. 2) Rent paid minus 10% of (Basic+DA). Annual rent -10% basic. 3) 50% of Basic+DA if living in metro (Delhi, Mumbai, Kolkata, Chennai), 40% if non-metro. Our calculator calculates all 3 and shows minimum as exemption. Remaining HRA is taxable and added to income.</p>
+<p>Rent Calculation: If monthly rent Rs 25k, annual rent = 3L. 10% basic = 60k (6L*10%). So rent -10% basic = 2.4L. If you increase rent to Rs 30k monthly (3.6L yearly), then rent -10% basic = 3L, then exemption becomes 3L full. So paying higher rent increases exemption till limit of HRA received or 50% basic whichever lower.</p>
+
+<h2>Why Rently HRA Calculator is Rank #1?</h2>
+<p>1. Govt Accurate: Uses exact 3-rule formula as per IT Act Section 10(13A) with metro/non-metro. 2. Tax Saving Shown: Shows how much tax you save monthly/yearly based on your slab. 3. Tips: Suggests how much rent to pay to get full exemption. 4. No Limits: Unlimited, no login, screenshot ready. 5. SEO Ready: Fast, mobile, FAQ schema, targets 100K searches/month for 'HRA calculator'.</p>
+<p>Important: HRA exemption requires rent receipts and rent agreement if rent > Rs 1L yearly. If rent > Rs 50k per month, you need to deduct TDS 5% and give landlord PAN. If you pay rent to parents, it is allowed but must be genuine with agreement and transfer proof. If you own house in same city, HRA exemption may be disallowed.</p>
+
+<h2>How to Save Maximum Tax with HRA?</h2>
+<p>1. Live on rent even if you own house in different city - you can claim both HRA and home loan interest. 2. Pay rent via bank transfer, not cash, keep receipts. 3. If spouse is working, split rent to double exemption? No, only one can claim for same house. 4. For metro, try to get HRA = 50% basic from employer to maximize exemption. 5. If rent is low, increase HRA exemption by increasing rent on paper? No, fake rent is illegal, rent must be genuine. 6. Choose Old Regime if HRA exemption >1.5L, otherwise New Regime may be better.</p>
+<p>Worldwide: In USA rent not tax-free, but mortgage interest deductible. In UK rent not exempt. In Dubai no tax. Our calculator is for India where HRA is unique tax benefit.</p>
+
+<h2>Frequently Asked Questions (FAQ)</h2>
+<div class="faq">
+<div><b>Q1. How much HRA is tax-free?</b><br>HRA tax-free is minimum of 3: Actual HRA, Rent-10% Basic, 50% Basic metro / 40% non-metro. For 6L basic, 3L HRA, 25k rent metro, exemption = 2.4L.</div>
+<div><b>Q2. Is HRA exempt in new tax regime?</b><br>No, HRA exemption is NOT available in New Regime 2026. It is only available in Old Regime with deductions. In new regime HRA fully taxable.</div>
+<div><b>Q3. Can I claim HRA if I live with parents?</b><br>Yes, if you pay rent to parents with genuine rent agreement and bank transfer, you can claim HRA. Parents will show rental income and pay tax.</div>
+<div><b>Q4. What is metro city for HRA?</b><br>Metro for HRA = Delhi, Mumbai, Kolkata, Chennai only. 50% of basic exemption. All other cities are non-metro with 40% basic.</div>
+<div><b>Q5. Is this HRA calculator free?</b><br>Yes, Rently HRA Exemption Calculator is 100% free, unlimited, no watermark, accurate as per IT Act 2026.</div>
+</div>
+</div>
+</div>
+
+<footer>
+<p>© 2026 Rently - Free HRA Exemption Calculator</p>
+<div style="margin-top:10px">
+<a href="/terms">Terms</a><a href="/privacy">Privacy</a><a href="https://fixoraa.tech">More Tools</a><a href="/">Home</a>
+</div>
+<p style="margin-top:8px;font-size:11px">Disclaimer: HRA rules as per Section 10(13A). Old regime only. Consult CA for filing.</p>
+</footer>
+
+<script>
+function calcHRA(){
+let basic=parseFloat(document.getElementById('basic').value)||0;
+let da=parseFloat(document.getElementById('da').value)||0;
+let hraRec=parseFloat(document.getElementById('hraRec').value)||0;
+let rentM=parseFloat(document.getElementById('rentM').value)||0;
+let city=document.getElementById('city').value;
+let slab=parseFloat(document.getElementById('slab').value)||20;
+
+let basicDA=basic+da;
+let rentAnnual=rentM*12;
+let rule1=hraRec;
+let rule2=Math.max(0, rentAnnual - (basicDA*0.10));
+let rule3= city==='metro' ? basicDA*0.50 : basicDA*0.40;
+
+let exempt=Math.min(rule1, rule2, rule3);
+let taxable=hraRec - exempt;
+let taxSaved=exempt * slab/100;
+
+document.getElementById('exempt').innerHTML='₹ '+Math.round(exempt).toLocaleString('en-IN')+' <span style="font-size:14px;font-weight:400;color:#d6d3d1"> / year tax-free</span>';
+document.getElementById('taxSave').innerText=`Tax Saved: ₹ ${Math.round(taxSaved).toLocaleString('en-IN')} yearly • ₹ ${Math.round(taxSaved/12).toLocaleString('en-IN')} monthly`;
+document.getElementById('r1').innerText='₹ '+Math.round(rule1).toLocaleString('en-IN');
+document.getElementById('r2').innerText='₹ '+Math.round(rule2).toLocaleString('en-IN');
+document.getElementById('r3').innerText='₹ '+Math.round(rule3).toLocaleString('en-IN')+(city==='metro'?' (50% Basic)':' (40% Basic)');
+document.getElementById('rExempt').innerText='₹ '+Math.round(exempt).toLocaleString('en-IN');
+document.getElementById('rTaxable').innerText='₹ '+Math.round(taxable).toLocaleString('en-IN');
+document.getElementById('rMonthly').innerText='₹ '+Math.round(exempt/12).toLocaleString('en-IN');
+
+let tip=document.getElementById('tip');
+let neededRent = (Math.min(rule1, rule3) + basicDA*0.10)/12;
+if(exempt < Math.min(rule1, rule3)){
+tip.innerHTML=`💡 Tip: Increase rent to ₹${Math.round(neededRent).toLocaleString('en-IN')}/month to get full ₹${Math.round(Math.min(rule1, rule3)).toLocaleString('en-IN')} exemption and save extra ₹${Math.round((Math.min(rule1, rule3)-exempt)*slab/100).toLocaleString('en-IN')} tax!`;
+} else {
+tip.innerHTML=`🎉 Perfect! You are getting maximum HRA exemption possible. You save ₹${Math.round(taxSaved).toLocaleString('en-IN')} tax yearly.`;
+}
+}
+calcHRA();
+document.querySelectorAll('input, select').forEach(el=>el.addEventListener('input',calcHRA));
+</script>
+<script type="application/ld+json">
+{
+"@context":"https://schema.org",
+"@type":"FAQPage",
+"mainEntity":[
+{"@type":"Question","name":"How much HRA is tax-free?","acceptedAnswer":{"@type":"Answer","text":"Minimum of 3: Actual HRA, Rent-10% Basic, 50% Metro / 40% Non-metro."}},
+{"@type":"Question","name":"Is HRA calculator free?","acceptedAnswer":{"@type":"Answer","text":"Yes 100% free, unlimited, accurate as per IT Act."}}
+]
+}
+</script>
+</body>
+</html>
